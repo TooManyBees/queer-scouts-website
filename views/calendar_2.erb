@@ -1,0 +1,45 @@
+<style type="text/css">
+  .calendar {
+    max-width: 600px;
+    /*margin: auto;*/
+  }
+  .event-card {
+    background-color: hsl(var(--hue), 60%, 85%);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .event-card .date {
+
+  }
+  .event-card .summary {
+
+  }
+  .event-card .description {
+
+  }
+  .event-card .location {
+
+  }
+</style>
+
+<div class="calendar">
+  <% now = DateTime.now %>
+  <% last_month = nil %>
+  <% @items.each do |item| %>
+    <% if last_month != item.month %>
+      <% last_month = item.month %>
+      <h2><%= item.start_date.strftime("%B %Y") %></h2>
+    <% end %>
+    <% hue = (item.start_date.yday * 360.0 / 365.0 - 196).round %>
+    <div class="event-card <%= ('past' if item.start_date < now) %>" style="--hue: <%= hue %>;" >
+      <time class="date" datetime="<%= item.start_date.rfc3339 %>">
+        <%= item.duration %>
+      </time>
+      <div>
+        <a href="<%= item.html_link %>" rel="external nofollow noreferrer noopener"><%= item.summary %></a>
+      </div>
+      <div><%= item.description %></div>
+      <div><%= item.location %></div>
+    </div>
+  <% end %>
+</div>
