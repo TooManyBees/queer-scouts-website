@@ -7,13 +7,14 @@ require "active_support/core_ext/object/blank"
 require "active_support/core_ext/string/output_safety"
 require "active_support/core_ext/time"
 require "./event.rb"
+require "./api.rb"
 # require "fileutils"
 
 Time.zone_default = ActiveSupport::TimeZone["America/New_York"]
 
-APPLICATION_NAME = "queer scouts website"
+CALENDAR_ID = "vfg030t77qemh643tvkb1jroj4@group.calendar.google.com"
 SERVICE = Google::Apis::CalendarV3::CalendarService.new
-SERVICE.client_options.application_name = APPLICATION_NAME
+SERVICE.client_options.application_name = "queerscouts.nyc"
 # https://console.developers.google.com
 # -> create new app
 # -> enable api
@@ -34,19 +35,12 @@ end
 
 get "/" do
   this_month = Time.zone.now.at_beginning_of_month
-  next_month = this_month.next_month
-  # next_next_month = next_month.next_month
-  response = SERVICE.list_events("vfg030t77qemh643tvkb1jroj4@group.calendar.google.com", {
-    single_events: true,
-    order_by: "startTime",
-    time_min: this_month.rfc3339,
-    time_max: next_month.rfc3339,
-    fields: "items(htmlLink, iCalUID, start, end, summary, description, location)",
-  })
-
-  @items = response.items.map { |item| Event.new(item) }
-  @first_day = this_month
-  @last_day = next_month - 1
+  # Cache responses in prod
+  @items = if settings.production?
+    Api.get(CALENDAR_ID, this_month)
+  else
+    Api.get_from_origin(CALENDAR_ID, this_month).events
+  end
 
   erb :index
 end
