@@ -6,7 +6,7 @@
       <% hue = (item.start_date.at_beginning_of_month.yday * 360.0 / 365.0 - 196).round %>
       <h2 class="calendar-month-header" style="--hue: <%= hue %>"><%= item.start_date.strftime("%B %Y") %></h2>
     <% end %>
-    <% hue = (item.start_date.yday * 360.0 / 365.0 - 196).round %>
+    <% hue = -(item.start_date.yday * 360.0 / 365.0 - 196).round %>
     <div class="event-card <%= ('past' if item.end_date.past?) %>" style="--hue: <%= hue %>;" >
       <p class="summary">
         <a href="<%= item.html_link %>" rel="external nofollow noreferrer noopener" title="<%= item.summary %> (View in Google Calendar)"><%= item.summary %></a>
