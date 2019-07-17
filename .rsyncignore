@@ -1,0 +1,10 @@
+*.pid
+*.sock
+*.state
+.git
+*.log
+.DS_Store
+.gitignore
+.rsyncignore
+.login
+sync

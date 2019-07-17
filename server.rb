@@ -23,6 +23,10 @@ configure do
   set :port, 3003
 end
 
+configure :production do
+  disable :static
+end
+
 get "/" do
   this_month = DateTime.now.then { |s| DateTime.new(s.year, s.month, 1, 0, 0, 0, s.offset) }
   next_month = DateTime.now.then { |s| DateTime.new(s.year, (s.month % 12) + 1, 1, 0, 0, 0, s.offset) }
