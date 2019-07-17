@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
+require "erubis"
 require "sinatra"
 require "google/apis/calendar_v3"
-require "active_support"
 require "active_support/core_ext/object/blank"
 require "active_support/core_ext/string/output_safety"
 require "active_support/core_ext/time"
 require "./event.rb"
 require "./api.rb"
-# require "fileutils"
 
 Time.zone_default = ActiveSupport::TimeZone["America/New_York"]
 
@@ -28,6 +27,7 @@ SERVICE.key = File.read(".google_api").chomp
 configure do
 	set :port, 3003
 	set :static_cache_control, :must_revalidate
+	set :erb, :escape_html => true
 end
 
 configure :production do

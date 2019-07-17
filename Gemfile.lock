@@ -11,6 +11,7 @@ GEM
     concurrent-ruby (1.1.5)
     declarative (0.0.10)
     declarative-option (0.1.0)
+    erubis (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     google-api-client (0.30.6)
@@ -69,6 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  erubis
   google-api-client (~> 0.30.6)
   sinatra
 
