@@ -1,0 +1,36 @@
+body {
+  /*background: url(/20181104_162426.jpg) center/cover no-repeat;*/
+  /*min-height: 100vh;*/
+  /*margin: 0;*/
+  /*padding: 8px;*/
+  /*box-sizing: border-box;*/
+}
+a[rel~="external"] {
+  background: url(/external.svg) center right/auto 60% no-repeat;
+  padding-right: 25px;
+}
+h2 {
+  color: hsl(var(--hue), 70%, 50%);
+}
+.calendar {
+  max-width: 600px;
+}
+.event-card {
+  background-color: hsl(var(--hue), 60%, 85%);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.event-card .date {
+  margin: 5px 0 0 0;
+}
+.event-card .summary {
+  font-size: 150%;
+  margin: 0;
+}
+.event-card .description {
+  margin: 5px 0 0 0;
+}
+.event-card .location {
+  margin: 5px 0 0 0;
+}
