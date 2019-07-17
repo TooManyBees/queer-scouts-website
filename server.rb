@@ -2,9 +2,14 @@
 
 require "sinatra"
 require "google/apis/calendar_v3"
-require "date"
+require "active_support"
+require "active_support/core_ext/object/blank"
+require "active_support/core_ext/string/output_safety"
+require "active_support/core_ext/time"
 require "./event.rb"
 # require "fileutils"
+
+Time.zone_default = ActiveSupport::TimeZone["America/New_York"]
 
 APPLICATION_NAME = "queer scouts website"
 SERVICE = Google::Apis::CalendarV3::CalendarService.new
@@ -28,8 +33,9 @@ configure :production do
 end
 
 get "/" do
-  this_month = DateTime.now.then { |s| DateTime.new(s.year, s.month, 1, 0, 0, 0, s.offset) }
-  next_month = DateTime.now.then { |s| DateTime.new(s.year, (s.month % 12) + 1, 1, 0, 0, 0, s.offset) }
+  this_month = Time.zone.now.at_beginning_of_month
+  next_month = this_month.next_month
+  # next_next_month = next_month.next_month
   response = SERVICE.list_events("vfg030t77qemh643tvkb1jroj4@group.calendar.google.com", {
     single_events: true,
     order_by: "startTime",
@@ -43,6 +49,4 @@ get "/" do
   @last_day = next_month - 1
 
   erb :index
-
-  # [200, {"Content-Type" => "application/json"}, JSON.dump(response.items)]
 end

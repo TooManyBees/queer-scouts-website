@@ -28,7 +28,6 @@
 </style>
 
 <div class="calendar">
-  <% now = DateTime.now %>
   <% last_month = nil %>
   <% @items.each do |item| %>
     <% if last_month != item.month %>
@@ -36,7 +35,7 @@
       <h2><%= item.start_date.strftime("%B %Y") %></h2>
     <% end %>
     <% hue = (item.start_date.yday * 360.0 / 365.0 - 196).round %>
-    <div class="event-card <%= ('past' if item.start_date < now) %>" style="--hue: <%= hue %>;" >
+    <div class="event-card <%= ('past' if item.end_date.past?) %>" style="--hue: <%= hue %>;" >
       <p class="summary">
         <a href="<%= item.html_link %>" rel="external nofollow noreferrer noopener" title="<%= item.summary %> (View in Google Calendar)"><%= item.summary %></a>
       </p>
