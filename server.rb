@@ -21,7 +21,6 @@ SERVICE.key = File.read(".google_api").chomp
 
 configure do
   set :port, 3003
-  disable :static
 end
 
 get "/" do
