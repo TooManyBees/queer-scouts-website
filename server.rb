@@ -27,6 +27,7 @@ SERVICE.key = File.read(".google_api").chomp
 
 configure do
   set :port, 3003
+  set :static_cache_control, :must_revalidate
 end
 
 configure :production do

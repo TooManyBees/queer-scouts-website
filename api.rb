@@ -40,7 +40,7 @@ class ApiResponse
   attr_reader :events
   def initialize(events)
     @events = events
-    @expiration = Time.zone.now.next_day
+    @expiration = Time.zone.now.advance(minutes: 30)
   end
 
   def fresh?
