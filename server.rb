@@ -26,22 +26,22 @@ SERVICE.client_options.application_name = "queerscouts.nyc"
 SERVICE.key = File.read(".google_api").chomp
 
 configure do
-  set :port, 3003
-  set :static_cache_control, :must_revalidate
+	set :port, 3003
+	set :static_cache_control, :must_revalidate
 end
 
 configure :production do
-  disable :static
+	disable :static
 end
 
 get "/" do
-  this_month = Time.zone.now.at_beginning_of_month
-  # Cache responses in prod
-  @items = if settings.production?
-    Api.get(CALENDAR_ID, this_month)
-  else
-    Api.get_from_origin(CALENDAR_ID, this_month).events
-  end
+	this_month = Time.zone.now.at_beginning_of_month
+	# Cache responses in prod
+	@items = if settings.production?
+		Api.get(CALENDAR_ID, this_month)
+	else
+		Api.get_from_origin(CALENDAR_ID, this_month).events
+	end
 
-  erb :index
+	erb :index
 end

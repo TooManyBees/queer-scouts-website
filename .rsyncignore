@@ -7,4 +7,5 @@
 .gitignore
 .rsyncignore
 .login
+.editorconfig
 sync

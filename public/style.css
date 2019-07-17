@@ -1,72 +1,72 @@
 body {
-  /*background: url(/20181104_162426.jpg) center/cover no-repeat;*/
-  /*min-height: 100vh;*/
-  max-width: 600px;
-  padding: 8px 8px 20px 8px;
-  box-sizing: border-box;
-  margin: auto;
+	/*background: url(/20181104_162426.jpg) center/cover no-repeat;*/
+	/*min-height: 100vh;*/
+	max-width: 600px;
+	padding: 8px 8px 20px 8px;
+	box-sizing: border-box;
+	margin: auto;
 }
 a[href^="https://"], a[href^="http://"] {
-  background: url(/external.svg) center right/auto 60% no-repeat;
-  padding-right: 1em;
+	background: url(/external.svg) center right/auto 60% no-repeat;
+	padding-right: 1em;
 }
 .rainbow-shadow {
-  position: relative;
+	position: relative;
 }
 .rainbow-shadow:after {
-  content: var(--text);
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  z-index: -1;
-  background: url(/stripe-v-scroll.gif);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent !important;
-  pointer-events: none;
-  @media (prefers-reduced-motion: reduce) {
-    display: none;
-  }
+	content: var(--text);
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	z-index: -1;
+	background: url(/stripe-v-scroll.gif);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent !important;
+	pointer-events: none;
+	@media (prefers-reduced-motion: reduce) {
+		display: none;
+	}
 }
 .hero img {
-  max-width: 100%;
+	max-width: 100%;
 }
 /* Not yet implemented in user agents, womp womp */
 @media (prefers-contrast: high) {
-  .calendar-month-header {
-    color: unset;
-  }
-  .event-card {
-    background-color: unset;
-    border: 1px solid black;
-  }
+	.calendar-month-header {
+		color: unset;
+	}
+	.event-card {
+		background-color: unset;
+		border: 1px solid black;
+	}
 }
 .calendar-month-header {
-  color: hsl(var(--hue), 70%, 50%);
+	color: hsl(var(--hue), 70%, 50%);
 }
 .event-card {
-  background-color: hsl(var(--hue), 60%, 85%);
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 5px;
+	background-color: hsl(var(--hue), 60%, 85%);
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 5px;
 }
 .event-card .date {
-  margin: 5px 0 0 0;
+	margin: 5px 0 0 0;
 }
 .event-card .summary {
-  font-size: 150%;
-  margin: 0;
+	font-size: 150%;
+	margin: 0;
 }
 .event-card .description {
-  margin: 5px 0 0 0;
+	margin: 5px 0 0 0;
 }
 .event-card .location {
-  margin: 5px 0 0 0;
+	margin: 5px 0 0 0;
 }
 address {
-  line-height: 150%;
+	line-height: 150%;
 }
 address img {
-  width: 1em;
-  vertical-align: middle;
+	width: 1em;
+	vertical-align: middle;
 }

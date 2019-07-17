@@ -1,0 +1,9 @@
+[**/*.{rb,erb,js,css,svg}]
+end_of_line = lf
+insert_final_newline = true
+indent_style = tab
+
+[{Gemfile,Gemfile.lock}]
+indent_style = space
+indent_size = 2
+
