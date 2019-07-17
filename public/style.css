@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   margin: auto;
 }
-a[rel~="external"] {
+a[href^="https://"], a[href^="http://"] {
   background: url(/external.svg) center right/auto 60% no-repeat;
   padding-right: 1em;
 }
@@ -63,7 +63,6 @@ a[rel~="external"] {
 .event-card .location {
   margin: 5px 0 0 0;
 }
-
 address {
   line-height: 150%;
 }
