@@ -1,12 +1,13 @@
 <% content_for(:title) { "Contact" } %>
+<% blank_email_subject = URI.encode_www_form_component("To protect against spam, the email link you clicked doesn't point anywhere because JavaScript was not working on the page. Try again with JS enabled.") %>
 
 <h2>Email</h2>
 <p>
 	Listserv: <a href="https://forms.gle/tRLJCsYLRCZcPG4x8" rel="external noopener"><img src="/mail.svg" class="inline"> Signup form</a>
 	<br>
-	Organizer: <a href="mailto:noscript@queerscouts.nyc" data-email="river"><img src="/conference.svg" class="inline"> River DiLeo</a>
+	Organizer: <a href="mailto:noscript@queerscouts.nyc?subject=<%= blank_email_subject %>" data-email="river"><img src="/conference.svg" class="inline"> River DiLeo</a>
 	<br>
-	Web admin: <a href="mailto:noscript@queerscouts.nyc" data-email="jess"><img src="/server.svg" class="inline"> Jess Bees</a>
+	<!-- Web admin: <a href="mailto:noscript@queerscouts.nyc?subject=<%= blank_email_subject %>" data-email="jess"><img src="/server.svg" class="inline"> Jess Bees</a> -->
 </p>
 
 <h2>Social Media</h2>
