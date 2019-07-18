@@ -123,7 +123,7 @@ get "/about/?" do
 	erb :about
 end
 
-get "/code-of-conduct/?", "/code_of_conduct/?", "/codeofconduct/?" do
+get "/code-of-conduct/?", "/code_of_conduct/?", "/codeofconduct/?", "/conduct/?" do
 	redirect to("/coc"), 301
 end
 
@@ -137,3 +137,9 @@ get "/contact/?" do
 	erb :contact
 end
 
+# post "/api/update" do
+# 	# validate token or whatever
+# 	# header X-Goog-Channel-Token
+# 	# https://console.developers.google.com/apis/credentials/domainverification?project=queer-scouts-test-app&folder&organizationId
+# 	Api.purge!
+# end
