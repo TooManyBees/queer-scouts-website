@@ -1,0 +1,10 @@
+<% klass ||= nil %>
+<nav class="<%= klass %>">
+	<%== link_unless_current "/", "Home" %>
+	•
+	<%== link_unless_current "/about", "About" %>
+	•
+	<%== link_unless_current "/coc", "Code of Conduct" %>
+	•
+	<%== link_unless_current "/contact", "Contact" %>
+</nav>

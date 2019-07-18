@@ -1,41 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Queer Scouts NYC</title>
-	<link rel="stylesheet" type="text/css" href="/style.css">
-</head>
-<body>
-	<h1 class="rainbow-shadow" style="--text: 'Queer Scouts NYC'">
-		Queer Scouts NYC
-	</h1>
+<picture class="hero">
+	<source srcset="/20190715_195859.webp" type="image/webp">
+	<img src="/20190715_195859.jpg">
+</picture>
 
-	<picture class="hero">
-		<source srcset="/20190715_195859.webp" type="image/webp">
-		<img src="/20190715_195859.jpg">
-	</picture>
+<%== erb :"partials/mission" %>
 
-	<p>
-		This is our mission statement. As you can see, it's very comprehensive.
-  </p>
+<p>
+	To keep up to date with Queer Scouts NYC, join the
+	<a href="https://www.facebook.com/groups/283924708806941" rel="external noreferrer noopener">Queer Scouts Facebook Group</a>
+	or signup for the
+	<a href="https://forms.gle/tRLJCsYLRCZcPG4x8" rel="external noopener">email listserv.</a>
+</p>
 
-	<p>Every 3rd Monday at the <a href="https://lgbtbrooklyn.org/" rel="external noopener">Brooklyn Community Pride Center</a> (1360 Fulton St, Brooklyn, NY 11216)</p>
+<p>Queer Scouts NYC hosts organizational den meetings every 3rd Monday at the <a href="https://lgbtbrooklyn.org/" rel="external noopener">Brooklyn Community Pride Center</a> (1360 Fulton St, Brooklyn, NY 11216)</p>
 
-	<p>
-		To keep up to date with Queer Scouts NYC, join the
-		<a href="https://www.facebook.com/groups/283924708806941" rel="external noreferrer noopener">Queer Scouts Facebook Group</a>
-		or signup for the
-		<a href="https://forms.gle/tRLJCsYLRCZcPG4x8" rel="external noopener">email listserv.</a>
-	</p>
+<p>Participants are expected to abide by our <a href="/coc">code of conduct.</a></p>
 
-	<p>We have a <a href="/coc">code of conduct.</a></p>
-
-	<%== erb :"partials/calendar" %>
-
-	<footer>
-		<%== erb :"partials/contact" %>
-		<a href="/coc">Code of Conduct</a>
-	</footer>
-
-	<script type="text/javascript" src="/email.js"></script>
-</body>
-</html>
+<%== erb :"partials/calendar" %>
