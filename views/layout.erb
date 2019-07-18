@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>
-		<%= [yield_content(:title).presence, "Queer Scouts NYC"].compact.join(" - ") %>
+		<%= [yield_content(:title).presence, QUEER_SCOUTS].compact.join(" - ") %>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
 	<header>
-		<% page_name = yield_content(:title).presence || "Queer Scouts NYC" %>
+		<% page_name = yield_content(:title).presence || QUEER_SCOUTS %>
 		<h1 class="title rainbow-shadow" style="--text: '<%= page_name %>';">
 			<%= page_name %>
 		</h1>
