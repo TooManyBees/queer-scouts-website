@@ -111,6 +111,7 @@ img.inline {
 	margin-right: 20px;
 	font-size: 200%;
 	transform: scale(1.0, 0.9);
+	display: none;
 }
 .flag span {
 	display: inline-block;
@@ -127,4 +128,12 @@ img.inline {
 	top: 1px;
 	left: 1px;
 	z-index: -1;
+}
+@supports (--color: black) {
+	.flag {
+		display: unset;
+	}
+	.flag-default {
+		display: none;
+	}
 }
