@@ -109,6 +109,8 @@ img.inline {
 }
 .flag {
 	margin-right: 20px;
+	font-size: 200%;
+	transform: scale(1.0, 0.9);
 }
 .flag span {
 	display: inline-block;
@@ -119,11 +121,8 @@ img.inline {
 	position: relative;
 }
 .flag span:after {
-	content: "❤️";
-	background: black;
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent !important;
+	content: "♥︎";
+	color: initial;
 	position: absolute;
 	top: 1px;
 	left: 1px;

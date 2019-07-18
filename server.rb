@@ -94,11 +94,11 @@ helpers do
 		hearts = flag[:colors]
 			.map do |color|
 				style = if color == :intersex
-					'background-image: radial-gradient(circle at center, #FFDA00, #FFDA00 20%, #7902AA 22%, #7902AA 35%, #FFDA00 37%, #FFDA00);'
+					'background-image: radial-gradient(circle at center 45%, #FFDA00, #FFDA00 15%, #7902AA 17%, #7902AA 30%, #FFDA00 32%, #FFDA00);'
 				else
 					"--color:#{color};"
 				end
-				"<span style=\"#{style}\" aria-hidden=\"true\">❤️</span>"
+				"<span style=\"#{style}\" aria-hidden=\"true\">♥︎</span>"
 			end
 			.join
 			.html_safe
