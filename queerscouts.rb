@@ -29,7 +29,7 @@ configure :production do
 end
 
 helpers do
-	QUEER_SCOUTS = "Queer Scouts NYC"
+	QUEER_SCOUTS = "NYC Queer Scouts"
 
 	def strip_trailing_slashes
 		return if request.path == "/"
