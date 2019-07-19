@@ -8,23 +8,15 @@ require "google/apis/calendar_v3"
 require "active_support/core_ext/object/blank"
 require "active_support/core_ext/string/output_safety"
 require "active_support/core_ext/time"
+require "active_support/core_ext/date"
+require "active_support/core_ext/date_time"
 require "./event.rb"
 require "./api.rb"
 
 Time.zone_default = ActiveSupport::TimeZone["America/New_York"]
 
-CALENDAR_ID = "vfg030t77qemh643tvkb1jroj4@group.calendar.google.com"
-SERVICE = Google::Apis::CalendarV3::CalendarService.new
-SERVICE.client_options.application_name = "queerscouts.nyc"
-# https://console.developers.google.com
-# -> create new app
-# -> enable api
-# ---> calendar api
-# -> create credentials
-# ---> api key
-# -----> copy it down
-# -----> restrict permissions
-SERVICE.key = File.read(".google_api").chomp
+# CALENDAR_ID = "vfg030t77qemh643tvkb1jroj4@group.calendar.google.com"
+CALENDAR_ID = "ob3tjq46qktbbmot92ajrd1o88@group.calendar.google.com"
 
 configure do
 	set :port, 3003
