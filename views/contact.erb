@@ -1,18 +1,23 @@
 <% content_for(:title) { "Contact" } %>
 <% blank_email_subject = URI.encode_www_form_component("To protect against spam, the email link you clicked doesn't point anywhere because JavaScript was not working on the page. Try again with JS enabled.") %>
 
-<h2>Email</h2>
-<p>
-	Listserv: <a href="https://forms.gle/tRLJCsYLRCZcPG4x8" rel="external noopener"><img src="/mail.svg" class="inline">&nbsp;Signup form</a>
-	<br>
-	Organizer: <a href="mailto:noscript@queerscouts.nyc?subject=<%= blank_email_subject %>" data-email="river"><img src="/conference.svg" class="inline">&nbsp;River DiLeo</a>
-	<br>
-</p>
-
-<h2>Social Media</h2>
-<p>
-	Facebook: <a href="https://www.facebook.com/groups/283924708806941" rel="external noreferrer noopener"><img src="/trash-full.svg" class="inline">&nbsp;NYC Queer Scouts</a>
-</p>
+<table>
+	<tr>
+		<td>Organizer:</td>
+		<td><a href="mailto:noscript@queerscouts.nyc?subject=<%= blank_email_subject %>" data-email="river"><img src="/conference.svg" class="inline">&nbsp;River DiLeo</a></td>
+	</tr>
+		<td>Mailing list:</td>
+		<td><a href="https://forms.gle/tRLJCsYLRCZcPG4x8" rel="external noopener"><img src="/mail.svg" class="inline">&nbsp;Signup form</a></td>
+	<tr>
+	<tr>
+		<td>Discord:</td>
+		<td><a href="https://discord.gg/jpekbyD"><img src="/discord.svg" class="inline"> Invite link</a></td>
+	</tr>
+	<tr>
+		<td>Facebook:</td>
+		<td><a href="https://www.facebook.com/groups/283924708806941" rel="external noreferrer noopener"><img src="/trash-full.svg" class="inline">&nbsp;NYC Queer Scouts</a></td>
+	</tr>
+</table>
 
 <h2>Location</h2>
 </p>
@@ -21,7 +26,5 @@
 
 <h2>This Website</h2>
 <p>
-	Webmxster: <a href="mailto:noscript@queerscouts.nyc?subject=<%= blank_email_subject %>" data-email="jess"><img src="/server.svg" class="inline">&nbsp;Jess Bees</a>
-	<br>
-	The source code is freely available on <a href="https://github.com/TooManyBees/queer-scouts-website" rel="external noopener">GitHub.</a>
+	The source code is freely available on <a href="https://github.com/TooManyBees/queer-scouts-website" rel="external noopener">GitHub.</a> It is maintained by <a href="mailto:noscript@queerscouts.nyc?body=<%= blank_email_subject %>" data-email="jess"><img src="/server.svg" class="inline">&nbsp;Jess Bees</a>.
 </p>

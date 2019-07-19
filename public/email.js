@@ -17,5 +17,7 @@
 	}
 	Array.prototype.forEach.call(mails, function(elem) {
 		elem.addEventListener("click", click);
+		elem.addEventListener("auxclick", click);
+		elem.addEventListener("keydown", click);
 	});
 })();
