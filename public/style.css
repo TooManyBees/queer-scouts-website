@@ -1,5 +1,5 @@
 body {
-	max-width: 600px;
+	max-width: 40em;
 	padding: 8px;
 	box-sizing: border-box;
 	margin: auto;
@@ -10,13 +10,13 @@ a[href^="https://"], a[href^="http://"] {
 }
 .rainbow-shadow {
 	position: relative;
-	transform: translate(2px, 2px);
+	transform: translate(0.075em, 0.075em);
 }
 .rainbow-shadow:after {
 	content: var(--text);
 	position: absolute;
-	top: -2px;
-	left: -2px;
+	top: -0.075em;
+	left: -0.075em;
 	z-index: 1;
 	background: url(/stripe-v-scroll.gif);
 	background-clip: text;
@@ -83,22 +83,22 @@ p, ol, ul {
 }
 .event-card {
 	background-color: hsl(var(--hue), 60%, 85%);
-	padding: 20px;
-	margin: 20px 0;
+	padding: 1.25em;
+	margin: 1.25em 0;
 	border-radius: 5px;
 }
 .event-card .date {
-	margin: 5px 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 .event-card .summary {
 	font-size: 150%;
 	margin: 0;
 }
 .event-card .description {
-	margin: 5px 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 .event-card .location {
-	margin: 5px 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 address {
 	line-height: 150%;
@@ -108,7 +108,7 @@ img.inline {
 	vertical-align: top;
 }
 .flag {
-	margin-right: 20px;
+	margin-right: 1em;
 	font-size: 200%;
 	transform: scale(1.0, 0.9);
 	display: none;
@@ -142,10 +142,10 @@ img.inline {
 	position: fixed;
 	top: -999px;
 	background-color: white;
-	padding: 8px;
+	padding: 0.5em;
 	z-index: 10;
 }
 .skip:focus {
-	top: 8px;
-	left: 8px;
+	top: 0.5em;
+	left: 0.5em;
 }
