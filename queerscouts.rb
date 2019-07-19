@@ -138,8 +138,8 @@ get "/contact/?" do
 end
 
 # post "/api/update" do
-# 	# validate token or whatever
-# 	# header X-Goog-Channel-Token
-# 	# https://console.developers.google.com/apis/credentials/domainverification?project=queer-scouts-test-app&folder&organizationId
+# 	tok = request.get_header("HTTP_X_GOOG_CHANNEL_TOKEN")
+#   # do a thing to validate!
+# 	https://console.developers.google.com/apis/credentials/domainverification?project=queer-scouts-test-app&folder&organizationId
 # 	Api.purge!
 # end
