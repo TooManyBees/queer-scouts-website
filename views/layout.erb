@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+	<a href="#content" class="skip">Skip to content</a>
 	<header>
 		<% page_name = yield_content(:title).presence || QUEER_SCOUTS %>
 		<h1 class="title rainbow-shadow" style="--text: '<%= page_name %>';">
@@ -15,7 +16,7 @@
 		</h1>
 		<%== erb :"partials/nav", locals: { klass: "top-nav" } %>
 	</header>
-	<%== yield %>
+	<main id="content"><%== yield %></main>
 	<footer>
 		<span class="flag-default" aria-label="Heart emoji in Rainbow Pride colors">❤️🧡💛💚💙💖💜</span>
 		<%== random_heart_flag %>
