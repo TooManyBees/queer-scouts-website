@@ -96,6 +96,7 @@ p, ol, ul {
 }
 .event-card .description {
 	margin: 0.5em 0 0 0;
+	white-space: pre-line;
 }
 .event-card .location {
 	margin: 0.5em 0 0 0;
