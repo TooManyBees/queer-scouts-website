@@ -1,11 +1,9 @@
-require "active_support/core_ext/time"
-require "google/apis/calendar_v3"
-require "./event.rb"
+require "./lib/event.rb"
 
 module Api
 	SERVICE = Google::Apis::CalendarV3::CalendarService.new
 	SERVICE.client_options.application_name = "queer scouts website"
-	SERVICE.key = File.read(".google_api").chomp
+	SERVICE.key = File.read("./config/.google_api").chomp
 
 	@@cached = nil
 

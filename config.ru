@@ -10,6 +10,6 @@ require "active_support/core_ext/date_time"
 
 Time.zone_default = ActiveSupport::TimeZone["America/New_York"]
 
-require './queerscouts.rb'
+require './lib/queerscouts.rb'
 run QueerScouts
 

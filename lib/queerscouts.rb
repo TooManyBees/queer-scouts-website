@@ -2,7 +2,7 @@
 
 require "sinatra/multi_route"
 require "sinatra/content_for"
-require "./api.rb"
+require "./lib/api.rb"
 
 # CALENDAR_ID = "vfg030t77qemh643tvkb1jroj4@group.calendar.google.com"
 CALENDAR_ID = "ob3tjq46qktbbmot92ajrd1o88@group.calendar.google.com"
@@ -12,11 +12,18 @@ class QueerScouts < Sinatra::Base
 	helpers Sinatra::ContentFor
 
 	set :erb, :escape_html => true
+	set :views, File.join(settings.root, '..', 'views')
+	set :public_folder, File.join(settings.root, '..', 'public')
 	configure :development do
+		set :static, true
 		set :static_cache_control, :must_revalidate
 	end
 	configure :production do
-		disable :static
+		set :static, false
+	end
+
+	after do
+		headers("Content-Security-Policy" => "default-src 'self'; style-src 'self' 'unsafe-inline';")
 	end
 
 	helpers do
