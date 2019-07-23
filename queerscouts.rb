@@ -101,10 +101,15 @@ end
 get "/" do
 	this_month = Time.zone.now.at_beginning_of_month
 	# Cache responses in prod
-	@items = if settings.production?
-		Api.get(CALENDAR_ID, this_month)
-	else
-		Api.get_from_origin(CALENDAR_ID, this_month).events
+	@items = begin
+		if settings.production?
+			Api.get(CALENDAR_ID, this_month)
+		else
+			Api.get_from_origin(CALENDAR_ID, this_month).events
+		end
+	rescue Google::Apis::Error => e
+		logger.warn("Error getting google calendar data: #{e.status_code} #{e}")
+		Api.cached
 	end
 
 	erb :index

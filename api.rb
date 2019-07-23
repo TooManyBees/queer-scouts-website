@@ -34,6 +34,10 @@ module Api
 	def self.purge!
 		@@cached = nil
 	end
+
+	def self.cached
+		@@cached
+	end
 end
 
 class ApiResponse
