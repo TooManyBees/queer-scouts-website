@@ -12,6 +12,7 @@ class QueerScouts < Sinatra::Base
 	helpers Sinatra::ContentFor
 
 	set :erb, :escape_html => true
+	set :logging, true
 	set :views, File.join(settings.root, '..', 'views')
 	set :public_folder, File.join(settings.root, '..', 'public')
 	configure :development do
