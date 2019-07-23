@@ -1,3 +1,5 @@
 .google_api
 .login
 sync
+tmp
+log
