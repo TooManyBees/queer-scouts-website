@@ -101,6 +101,12 @@ p, ol, ul {
 .event-card .location {
 	margin: 0.5em 0 0 0;
 }
+.event-card.past {
+	opacity: 0.5;
+}
+.past .description, .past .location {
+	display: none;
+}
 address {
 	line-height: 150%;
 }
