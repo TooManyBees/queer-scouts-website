@@ -39,6 +39,28 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 		display: none;
 	}
 }
+.woodcut, main h1, main h2, main h3, main h4, main h5, main h6 {
+	/*background-image: repeating-linear-gradient(45deg,
+		black 0,
+		black 0.59px,
+		transparent 0.71px,
+		transparent 1.31px,
+		black 1.43px);*/
+	background-image: repeating-linear-gradient(45deg,
+		black 0,
+		black 1px,
+		transparent 1.1px,
+		transparent 2.00px,
+		black 2.12px);
+	padding: 2px;
+	border: 2px solid;
+	position: relative;
+}
+@media (prefers-contrast: high) {
+	.woodcut, main h1, main h2, main h3, main h4, main h5, main h6 {
+		background-image: none;
+	}
+}
 header, footer {
 	display: flex;
 	align-items: center;
@@ -171,4 +193,23 @@ img.inline {
 .skip:focus {
 	top: 0.5em;
 	left: 0.5em;
+}
+.dropcap {
+	font-size: 3rem;
+	line-height: 80%;
+	float: left;
+	margin: -4px 2px;
+}
+main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before {
+	display: block;
+	content: "";
+	position: absolute;
+	left: calc(100% + 0.5rem);
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2rem;
+	height: 2rem;
+	background: var(--ornament) center/contain no-repeat;
+	z-index: 1;
+	mix-blend-mode: multiply;
 }
