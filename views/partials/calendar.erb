@@ -1,10 +1,10 @@
-<div class="calendar">
+<section class="calendar">
 	<% last_month = nil %>
 	<% @items.each do |item| %>
 		<% if last_month != item.month %>
 			<% last_month = item.month %>
 			<% hue = (item.start_date.beginning_of_month.yday * 360.0 / 365.0 - 196).round %>
-			<h2 class="calendar-month-header" style="--hue: <%= hue %>"><%= item.start_date.strftime("%B %Y") %></h2>
+			<span class="calendar-month-header" style="--hue: <%= hue %>"><%= item.start_date.strftime("%B %Y") %></span>
 		<% end %>
 		<% hue = -(item.start_date.yday * 360.0 / 365.0 - 196).round %>
 		<div class="event-card <%= ('past' if item.end_date.past?) %>" style="--hue: <%= hue %>;" >
@@ -26,4 +26,4 @@
 			<% end %>
 		</div>
 	<% end %>
-</div>
+</section>

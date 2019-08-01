@@ -15,4 +15,3 @@ if QueerScouts.development?
 end
 
 run QueerScouts
-

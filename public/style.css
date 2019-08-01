@@ -5,8 +5,15 @@ body {
 	margin: auto;
 }
 a[href^="https://"], a[href^="http://"] {
-	background: url(/external.svg) center right/auto 60% no-repeat;
-	padding-right: 1em;
+	display: inline-flex;
+	align-items: center;
+}
+a[href^="https://"]:after, a[href^="http://"]:after {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background: url(/external.svg) right/auto 80% no-repeat;
 }
 .rainbow-shadow {
 	position: relative;
@@ -46,8 +53,19 @@ footer {
 	margin-top: 1rem;
 	padding: 20px 0;
 }
-nav {
+header nav, footer nav {
 	flex: 0 0 auto;
+}
+table {
+	margin: 1rem 0;
+}
+main {
+	display: flex;
+	flex-direction: column;
+}
+main > * {
+	margin-top: 0;
+	align-self: flex-start;
 }
 aside {
 	border: 1px solid;
@@ -61,6 +79,7 @@ aside > :last-child {
 }
 .hero img {
 	max-width: 100%;
+	margin-bottom: 1rem;
 }
 h1 {
 	margin: 1rem 0;
@@ -68,15 +87,12 @@ h1 {
 p, ol, ul {
 	line-height: 125%;
 }
-/* Not yet implemented in user agents, womp womp */
-@media (prefers-contrast: high) {
-	.calendar-month-header {
-		color: unset;
-	}
-	.event-card {
-		background-color: unset;
-		border: 1px solid;
-	}
+.calendar {
+	width: 100%;
+}
+.calendar-month-header {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 .calendar-month-header {
 	color: hsl(var(--hue), 70%, 50%);
