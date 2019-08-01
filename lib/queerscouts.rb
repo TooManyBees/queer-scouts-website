@@ -85,11 +85,11 @@ class QueerScouts < Sinatra::Base
 			hearts = flag[:colors]
 				.map do |color|
 					style = if color == :intersex
-						'background-image: radial-gradient(circle at center 45%, #FFDA00, #FFDA00 15%, #7902AA 17%, #7902AA 25%, #FFDA00 27%, #FFDA00);'
+						'background-image: radial-gradient(circle at center 45%, #FFDA00, #FFDA00 14.5%, #7902AA 17%, #7902AA 25%, #FFDA00 28.5%, #FFDA00);'
 					else
 						"--color:#{color};"
 					end
-					"<span style=\"#{style}\" aria-hidden=\"true\">♥︎</span>"
+					"<span style=\"#{style}\" aria-hidden=\"true\">❤️</span>"
 				end
 				.join
 				.html_safe
