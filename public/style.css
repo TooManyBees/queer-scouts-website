@@ -260,3 +260,9 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 		border-color: hsl(var(--hue), 50%, 35%);
 	}
 }
+
+@media (max-width: 615px) {
+	#google-form-embed {
+		height: 3499px;
+	}
+}

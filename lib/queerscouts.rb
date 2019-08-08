@@ -24,7 +24,7 @@ class QueerScouts < Sinatra::Base
 	end
 
 	after do
-		headers("Content-Security-Policy" => "default-src 'self'; style-src 'self' 'unsafe-inline';")
+		headers("Content-Security-Policy" => "default-src 'self'; style-src 'self' 'unsafe-inline'; frame-src 'self' https://docs.google.com;")
 	end
 
 	helpers do
@@ -131,6 +131,11 @@ class QueerScouts < Sinatra::Base
 	get "/contact/?" do
 		strip_trailing_slashes and next
 		erb :contact
+	end
+
+	get "/planning/?" do
+		strip_trailing_slashes and next
+		erb :planning
 	end
 
 	# post "/api/update" do
