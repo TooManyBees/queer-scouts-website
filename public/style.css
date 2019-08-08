@@ -28,6 +28,7 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 	content: "";
 	display: inline-block;
 	width: 1em;
+	min-width: 1em;
 	height: 1em;
 	background: url(/external.svg) right/auto 80% no-repeat;
 }
@@ -89,8 +90,6 @@ header {
 	margin-bottom: 1rem;
 }
 footer {
-	border-top: 1px solid;
-	margin-top: 1rem;
 	padding: 20px 0;
 }
 header nav, footer nav {
@@ -175,8 +174,8 @@ img.inline {
 }
 .flag {
 	margin-right: 1em;
-	font-size: 200%;
-	transform: scale(1.0, 0.9);
+	/*font-size: 200%;*/
+	/*transform: scale(1.0, 0.9);*/
 	display: none;
 }
 .flag span {
