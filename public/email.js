@@ -1,7 +1,7 @@
 (function() {
 	var emails = {
-		river: "nope@example.com",
-		jess: "nope@example.com",
+		river: "bgdileo@gmail.com",
+		jess: "hi@toomanybees.com",
 	};
 	var mails = document.querySelectorAll('a[data-email]');
 	function click(event) {
