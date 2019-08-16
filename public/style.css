@@ -35,19 +35,19 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 }
 .rainbow-shadow {
 	position: relative;
-	transform: translate(0.075em, 0.075em);
+	transform: translate(0.05em, 0.05em);
 	color: initial;
 	color: var(--text-shadow-color);
 }
 .rainbow-shadow:after {
 	content: var(--text);
 	position: absolute;
-	top: -0.075em;
-	left: -0.075em;
+	top: -0.05em;
+	left: -0.05em;
 	z-index: 1;
 	background: url(/stripe-v-scroll.gif);
-	background-clip: text;
 	-webkit-background-clip: text;
+	background-clip: text;
 	color: transparent !important;
 	pointer-events: none;
 }
@@ -163,7 +163,7 @@ p, ol, ul {
 .event-card a {
 	display: inline-block;
 	padding: 0.2rem 0.3rem;
-	background-color: white;
+	background-color: var(--background-color);
 }
 .event-card.past {
 	/*opacity: 0.5;*/
