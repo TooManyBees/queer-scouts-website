@@ -60,20 +60,13 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 	}
 }
 .woodcut, main h1, main h2, main h3, main h4, main h5, main h6 {
-	/*background-image: repeating-linear-gradient(45deg,
-		var(--woodcut-color) 0,
-		var(--woodcut-color) 0.59px,
-		transparent 0.71px,
-		transparent 1.31px,
-		var(--woodcut-color) 1.43px);*/
 	background-image: repeating-linear-gradient(45deg,
 		var(--woodcut-color) 0,
 		var(--woodcut-color) 1px,
 		transparent 1.5px,
 		transparent 2.00px,
 		var(--woodcut-color) 2.83px);
-	padding: 2px;
-	border: 2px solid;
+	padding: 2px 4px;
 	position: relative;
 }
 @media (prefers-contrast: high) {
@@ -142,7 +135,7 @@ p, ol, ul {
 }
 .event-card {
 	--woodcut-color: hsla(var(--hue), 80%, 75%, 0.4);
-	border-color: hsl(var(--hue), 60%, 85%);
+	border: 2px solid hsl(var(--hue), 60%, 85%);
 	padding: 1.25em;
 	margin: 1.25em 0;
 }
@@ -227,7 +220,7 @@ img.inline {
 	font-size: 3rem;
 	line-height: 80%;
 	float: left;
-	margin: -4px 2px;
+	margin: 0 2px -4px 0;
 }
 main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before {
 	display: block;
