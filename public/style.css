@@ -250,7 +250,7 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 		--text-shadow-color: #BBB;
 		--link-color: #98C7FB;
 		--visited-color: #BF83EA;
-		--woodcut-color: #9A9A9A;
+		--woodcut-color: #9A9A9ACC;
 	}
 	main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before {
 		filter: invert(1);
@@ -264,6 +264,9 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 	.event-card {
 		--woodcut-color: hsla(var(--hue), 50%, 35%, 0.4);
 		border-color: hsl(var(--hue), 50%, 35%);
+	}
+	img.inline, a[href^="https://"]:after, a[href^="http://"]:after, h2:before {
+		filter: invert(1);
 	}
 }
 
