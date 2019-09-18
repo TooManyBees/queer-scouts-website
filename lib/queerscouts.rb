@@ -95,6 +95,10 @@ class QueerScouts < Sinatra::Base
 				.html_safe
 			%[<span class="flag" aria-label="#{label}" title="#{label}">#{hearts}</span>]
 		end
+
+		def hue day
+			((360.0 / 365.0).to_i - 196) % 365
+		end
 	end
 
 	get "/" do
