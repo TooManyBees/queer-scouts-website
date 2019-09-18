@@ -57,6 +57,8 @@ class QueerScouts < Sinatra::Base
 				colors:	%w{ #000000 #784F17 #E40303 #FF8C00 #FFED00 #008026 #004DFF #750787 } },
 			{ name: "Gilbert Baker's 1978",
 				colors:	%w{ #FF69B6 #E70000 #FF8C00 #FFEF00 #00811F #00C1C1 #0044FF #760089 } },
+			{ name: "Lesbian",
+				colors: %w{ #D73F2A #F49A54 #FFFFFF #D462A6 #A63562 } },
 			{ name: "Bisexual",
 				colors:	%w{ #D9006F #744D98 #0033AB } },
 			{ name: "Pansexual",
