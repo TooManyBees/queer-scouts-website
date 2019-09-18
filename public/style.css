@@ -15,15 +15,14 @@ body {
 	background-color: var(--background-color);
 	font-family: serif;
 }
+main {
+	font-size: 1.25em;
+}
 a {
 	color: var(--link-color);
 }
 a:visited {
 	color: var(--visited-color);
-}
-a[href^="https://"], a[href^="http://"] {
-	display: inline-flex;
-	align-items: center;
 }
 a[href^="https://"]:after, a[href^="http://"]:after {
 	content: "";
@@ -31,7 +30,7 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 	width: 1em;
 	min-width: 1em;
 	height: 1em;
-	background: url(/external.svg) right/auto 80% no-repeat;
+	background: url(/external.svg) right bottom/auto 80% no-repeat;
 }
 .rainbow-shadow {
 	position: relative;
@@ -115,7 +114,7 @@ aside > :last-child {
 }
 .hero img {
 	max-width: 100%;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 }
 h1 {
 	margin: 1rem 0;
@@ -127,11 +126,10 @@ p, ol, ul {
 	width: 100%;
 }
 .calendar-month-header {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	font-weight: bold;
-}
-.calendar-month-header {
 	color: hsl(var(--hue), 70%, 50%);
+	text-shadow: 0.05em 0.05em 0 var(--text-shadow-color);
 }
 .event-card {
 	--woodcut-color: hsla(var(--hue), 80%, 75%, 0.4);
@@ -149,6 +147,7 @@ p, ol, ul {
 .event-card .description {
 	margin: 0.5em 0 0 0;
 	white-space: pre-line;
+	word-break: break-word;
 }
 .event-card .location {
 	margin: 0.5em 0 0 0;
@@ -220,7 +219,7 @@ img.inline {
 	font-size: 3rem;
 	line-height: 80%;
 	float: left;
-	margin: 0 2px -4px 0;
+	margin: 0.35rem 0.25rem -0.25rem 0
 }
 main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before {
 	display: block;
@@ -262,6 +261,6 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 
 @media (max-width: 615px) {
 	#google-form-embed {
-		height: 3499px;
+		height: 4100px;
 	}
 }
