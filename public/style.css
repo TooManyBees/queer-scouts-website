@@ -69,7 +69,7 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 	background-image: repeating-linear-gradient(45deg,
 		var(--woodcut-color) 0,
 		var(--woodcut-color) 1px,
-		transparent 1.1px,
+		transparent 1.5px,
 		transparent 2.00px,
 		var(--woodcut-color) 2.83px);
 	padding: 2px;
@@ -252,7 +252,7 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 		--visited-color: #BF83EA;
 		--woodcut-color: #9A9A9ACC;
 	}
-	main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before {
+	main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, main h6:before, img.inline, a[href^="https://"]:after, a[href^="http://"]:after {
 		filter: invert(1);
 	}
 	a[href^="https://"]:after, a[href^="http://"]:after {
@@ -264,9 +264,6 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 	.event-card {
 		--woodcut-color: hsla(var(--hue), 50%, 35%, 0.4);
 		border-color: hsl(var(--hue), 50%, 35%);
-	}
-	img.inline, a[href^="https://"]:after, a[href^="http://"]:after, h2:before {
-		filter: invert(1);
 	}
 }
 

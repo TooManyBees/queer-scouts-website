@@ -5,6 +5,22 @@
 		<%= [yield_content(:title).presence, QUEER_SCOUTS].compact.join(" - ") %>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@media (prefers-color-scheme: dark) {
+			html {
+				--text-color: #F0F0F0;
+				--background-color: #000000;
+				--text-shadow-color: #BBB;
+				--link-color: #98C7FB;
+				--visited-color: #BF83EA;
+				--woodcut-color: #9A9A9ACC;
+			}
+		}
+		body {
+			color: var(--text-color);
+			background-color: var(--background-color);
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
