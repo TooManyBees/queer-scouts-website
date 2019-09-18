@@ -71,7 +71,7 @@ a[href^="https://"]:after, a[href^="http://"]:after {
 		var(--woodcut-color) 1px,
 		transparent 1.1px,
 		transparent 2.00px,
-		var(--woodcut-color) 2.12px);
+		var(--woodcut-color) 2.83px);
 	padding: 2px;
 	border: 2px solid;
 	position: relative;
@@ -166,7 +166,7 @@ p, ol, ul {
 	background-color: var(--background-color);
 }
 .event-card.past {
-	/*opacity: 0.5;*/
+	opacity: 0.5;
 }
 .past .description, .past .location {
 	display: none;
@@ -262,7 +262,7 @@ main h1:before, main h2:before, main h3:before, main h4:before, main h5:before, 
 		color: hsl(var(--hue), 75%, 70%);
 	}
 	.event-card {
-		--woodcut-color: hsl(var(--hue), 50%, 35%);
+		--woodcut-color: hsla(var(--hue), 50%, 35%, 0.4);
 		border-color: hsl(var(--hue), 50%, 35%);
 	}
 }
